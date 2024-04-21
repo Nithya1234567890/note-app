@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useContext } from 'react'
+import Form from './components/Form'
+import './App.css'
+import NoteItem from './components/NoteItem'
+import NoteContext from './NoteContext'
+const App = () => {
+  const {notes}=useContext(NoteContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="container1">
+    <div className="box">
+    <h1>Write Your Notes</h1>
+    <Form/>
+   {notes && notes.map((note)=>(
+    <div key={note.id} className='box2'>
+   <NoteItem note={note}/>
+   </div>
+   ))}
     </div>
-  );
+    </div>
+    </>
+  )
 }
 
-export default App;
+export default App
+

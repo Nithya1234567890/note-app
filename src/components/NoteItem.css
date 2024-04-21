@@ -1,0 +1,44 @@
+
+.box2>textarea{
+    width: 80%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 12px;
+    background-color: transparent;
+    color: black;
+    resize: none;
+    font-size: 1.5rem;
+    overflow-y: hidden;
+}
+.icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.icons svg{
+    background-color: white;
+    padding: 15px ;
+    border-radius: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+svg path{
+    color: black;
+}
+@media(max-width:400px){
+    .box2>textarea{
+    padding-left: 8px;
+    padding-top: 6px;
+    font-size: 1.1rem;
+    width: 75%;
+    }
+    .icons{
+        width: 35%;
+    }
+    .icons svg{
+        padding: 8px;
+        font-size: medium;
+    }
+    
+}
